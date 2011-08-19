@@ -1,0 +1,16 @@
+line55:maze[i][j] == .
+line51:j == 17
+line53:i == 6
+line54:j == 17
+line55:maze[i][j] == .
+Cookies/              Mail/                 iMovie/
+Favorites/            Mail Downloads/       iTunes/
+FontCollections/      PreferencePanes/
+[yuuki@yuuki Library]$ cd
+[yuuki@yuuki ~]$ emacs .emacs
+[yuuki@yuuki ~]$                             
+[yuuki@yuuki ~]$  
+[yuuki@yuuki ~]$ eys
+zsh: correct 'eys' to 'yes' [nyae]? [yuuki@yuuki ~]$ 
+[yuuki@yuuki ~]$ 
+screen | 0* zsh  1 zsh  2 zsh |                                                                              06/14  1:58
