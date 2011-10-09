@@ -15,6 +15,7 @@ using namespace std;
 
 int main(){
   int n=0;
+
   scanf("%d",&n);
   long long ans=1;
   for(int i = 2; i*i<n*2;i++){
