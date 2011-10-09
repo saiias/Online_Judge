@@ -19,21 +19,31 @@ int main()
 {
   int n;
   cin>>n;
-  for(int i = 0;i<n;i++){
+  while(n--){
+    
     int m;
     cin>>m;
-    vector<int>aa,bb;
+    int first=100000000,last=0;
+    vector<int>ans(1001,0);
+    for(int j = 0;j<m;j++){
+      char c;
+      int a,b;
+      cin>>c>>a>>b;
+      
+      first=min(first,a);
+      last=max(last,b);
+      
+      for(int x = a;x<b;x++){
+	ans[x]++;
+      }
     
-    for(int j = 0;j<m;m++){
-    char c;
-    cin>>c>>aa[j]>>bb[j];
     }
     
-
-    
+    for(int y= first;y<=last;y++)
+      if(ans[y])
+	cout<<char('A'+ans[y]-1);
+    cout<<endl;
   }
-  
   return 0;
-  
 }
 
