@@ -26,7 +26,7 @@ bool C(double x)
       num +=(int)(L[i]/x);
       
     }
-  return num>K;
+  return num >=K;
   
   
 }
@@ -51,6 +51,6 @@ int main(){
       
   }
   
-  printf(".2lf/n",floor(s*100/100));
+  printf("%.2lf\n",floor(s*100/100));
   
 }
