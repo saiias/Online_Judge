@@ -22,7 +22,6 @@ struct seq
   int inverse; 
 };
 
-
 void com(seq se[],int x)
 {
   for(int i=0;i<n-1;i++){
