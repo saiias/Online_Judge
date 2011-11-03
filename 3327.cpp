@@ -31,7 +31,9 @@ int main(){
       vector<int> size;
       c.push_back((cake){w,d});
       size.push_back(w*d);
-    for(int i=0;i<n;i++){    
+      int test;
+      
+      for(int i=0;i<n;i++){    
       int p,s;
       scanf("%d %d",&p,&s);
       //DEBUG(p);
