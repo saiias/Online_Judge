@@ -16,5 +16,7 @@ int main(){
     for(int i=0;i<8;i++){
       scanf("%c %c",&num1[i],&num2[i]);
     }
+
+        
   }
 }
