@@ -8,6 +8,7 @@ class Main{
 	    temp = in.nextLine();
 	    BigInteger b = new BigInteger(temp.substring(2),8);
 	    BigDecimal c = new BigDecimal(b);
+	    System.out.println(b+" "+c);
 	    for(int i = 2;i<temp.length();i++){
 		c=c.divide(new BigDecimal(8));
 	    }
