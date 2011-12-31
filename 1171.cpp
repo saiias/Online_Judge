@@ -4,7 +4,7 @@ using namespace std;
 
 class letter{
 public:
-  //•¶š‚Ì“ü—Í
+  //æ–‡å­—ã®å…¥åŠ›
   string input_letter(){
     string let;
     cout<<"Please Input Letter\n";
@@ -12,7 +12,7 @@ public:
     return let;  
   }
   
-  //•¶š‚Ì“_”Š·Z
+  //æ–‡å­—ã®ç‚¹æ•°æ›ç®—
   int letter_point(string let){
     int f=0;
     int point=0;
@@ -58,8 +58,8 @@ public:
 
 int  main(){
 
-  int max=0;//‚»‚Ì“_‚Å‚ÌÅ‘å’l
-  int flag=0; //ƒJƒ“ƒ}‚ª‚Å‚½‚ç1‚É‚È‚é
+  int max=0;//ãã®ç‚¹ã§ã®æœ€å¤§å€¤
+  int flag=0; //ã‚«ãƒ³ãƒãŒã§ãŸã‚‰1ã«ãªã‚‹
   letter l1;
   string str;
   str=l1.input_letter();
