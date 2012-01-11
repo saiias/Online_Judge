@@ -20,14 +20,14 @@ int main(){
       float a;
       
       scanf("%f",&a);
-      
+
       if(a==0.00) break;
       int ans=0;
       double temp=0;
 
       for(int i=2;temp<a;i++)
 	{
-	  temp+=(double)1/i;
+          temp+=(double)1/i;
 	  ans++;
 	  
 	}
