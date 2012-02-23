@@ -20,7 +20,6 @@ int X[MAX_N];
 
 void solve(){
   sort(X,X+N);
-
   int i=0;
   int ans=0;
   while(i<N){
