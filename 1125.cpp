@@ -28,7 +28,7 @@ typedef pair<int,int> P;
 struct edge {int to,cost;};
 int d[100000];
 
-int dijkstra(int s,struct edge G[][1000],int t){
+int dijkstra(int s,struct edge G[][128],int t){
     priority_queue<P,vector<P>,greater<P> > que;
     int result = 0;
     fill(d,d+100000,INF);
@@ -41,18 +41,26 @@ int dijkstra(int s,struct edge G[][1000],int t){
         for(int i = 0;i<(int)(sizeof(G[v])/sizeof(G[0][0]));++i){
             edge e = G[v][i];
             if(d[e.to]>d[v] +e.cost){
+                //              if(e.to == 3) DEBUG(e.cost);
                 d[e.to] = d[v] +e.cost;
                 que.push(P(d[e.to],e.to));
             }
         }
     }
-    for(int i = 1;i<=t;++i) result = max(result,d[i]);
+    for(int i = 1;i<=t;++i) {
+//        DEBUG(d[i]);
+        result = max(result,d[i]);
+    }
     return result;
 }
 
 int main(){
     while(1){
-        edge G[1000][1000];
+        edge G[128][128];
+        edge a;
+        a.to=a.cost=0;
+        REP(i,128)REP(j,128) G[i][j] =a;
+                                  
         int t;
         cin>>t;
         if(t  == 0) break;
@@ -61,6 +69,7 @@ int main(){
             cin>>k;
             for(int j = 0 ;j<k; ++j){
                 cin>>G[i][j].to>>G[i][j].cost;
+//                DEBUG(G[i][j].to);
             }
         }
 
@@ -68,11 +77,13 @@ int main(){
         int r = 0;
         for(int i  = 1;i<=t;++i){
             int temp = dijkstra(i,G,t);
+            //          DEBUG(temp);
             if(temp < result){
                 r = i;
                 result = temp;
             }
         }
+        
         if(result==INF) cout<<"disjoint"<<endl;
         else{
         cout<<r<<" "<<result<<endl;
@@ -82,4 +93,5 @@ int main(){
         return 0;
   
 }
+
 
