@@ -49,9 +49,6 @@ bool dfs(int row){
         REP(i,w) flag[i]^=!!(m[i]&1<<row);
     }
     return dfs(row+1);
-            
-            
-    
 }
 
 int main(){
