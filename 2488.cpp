@@ -16,7 +16,7 @@
 #define REP(i,n) for(int i = 0; i < (int)(n); i++)
 #define ALL(x) (x).begin(),(x).end()
 #define INF 1000000
-#define isValid(x,y) (x>=0 && x<p &&y>=0 && y<q)
+#define isValid(x,y,p,q) (x>=0 && x<p &&y>=0 && y<q)
 
 using namespace std;
 
