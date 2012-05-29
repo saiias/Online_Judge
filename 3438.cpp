@@ -27,22 +27,31 @@ typedef pair<int,int> P;
 
 int dx[]={-1,0,1,0};
 int dy[]={0,-1,0,1};
-
-int n;
-
+  
 ///////////////////////////////////////////////////////////////
 int main(){
-int in[1000000];
-
-while(~scanf("%d",&n)){
-    vector<int> dp(1000000,INF);
-    vector<int> id(1000000);
-    REP(i,n) cin>>in[i];
-    REP(i,n){
-      id[i] =distance(dp.begin(),lower_bound(ALL(dp),in[i]));
-      dp[id[i]] = in[i];
+  int t;
+  cin>>t;
+  while(t--){
+    string s;
+    cin>>s;
+    int last = s[0]-'0';
+    int num = 1;
+    for(int i = 1;i<(int)s.size();i++){
+      if(s[i-1]!=s[i]){
+        cout<<num;
+        cout<<last;
+        last=s[i]-'0';
+        num =1;
+      }else{
+        ++num;
+      }
     }
-    cout<<(*max_element(ALL(id))+1)<<endl;
+    
+
+    cout<<num;
+    cout<<last;
+    cout<<endl;
   }
   
   return 0;

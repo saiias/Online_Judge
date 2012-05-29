@@ -18,6 +18,9 @@
 #define INF 1000000
 #define isValid(x,y,p,q) (x>=0 && x<p &&y>=0 && y<q)
 
+#define PI (3.1415926535897932384626433832795)
+
+
 using namespace std;
 
 inline int toInt(string s) {int v; istringstream sin(s);sin>>v;return v;}
@@ -27,22 +30,15 @@ typedef pair<int,int> P;
 
 int dx[]={-1,0,1,0};
 int dy[]={0,-1,0,1};
-
-int n;
-
+  
 ///////////////////////////////////////////////////////////////
 int main(){
-int in[1000000];
-
-while(~scanf("%d",&n)){
-    vector<int> dp(1000000,INF);
-    vector<int> id(1000000);
-    REP(i,n) cin>>in[i];
-    REP(i,n){
-      id[i] =distance(dp.begin(),lower_bound(ALL(dp),in[i]));
-      dp[id[i]] = in[i];
-    }
-    cout<<(*max_element(ALL(id))+1)<<endl;
+  int a,b;
+  while(cin>>a>>b){
+    if(a==0&&b==0) break;
+    
+    printf("%.3f\n", pow((a*a*a-(6*b/PI)),1.0/3.0));
+    
   }
   
   return 0;

@@ -27,22 +27,32 @@ typedef pair<int,int> P;
 
 int dx[]={-1,0,1,0};
 int dy[]={0,-1,0,1};
-
-int n;
-
+  
 ///////////////////////////////////////////////////////////////
 int main(){
-int in[1000000];
+  ll x,y,carry,result,index;
+  while(cin>>x>>y){
+    if(x==0&&y==0) break;
+    carry = 0;
+    result =0;
+    index =1;
+    ll d=1;
+    while(d < 10000000000){
+      if(carry +(x/d)%10 + (y/d)%10>=10){
+        carry =1;
+        ++result;
+      }
+      else carry = 0;
 
-while(~scanf("%d",&n)){
-    vector<int> dp(1000000,INF);
-    vector<int> id(1000000);
-    REP(i,n) cin>>in[i];
-    REP(i,n){
-      id[i] =distance(dp.begin(),lower_bound(ALL(dp),in[i]));
-      dp[id[i]] = in[i];
+      d *=10;
+      
     }
-    cout<<(*max_element(ALL(id))+1)<<endl;
+    
+    if(result ==0) cout<<"No carry operation."<<endl;
+    else if(result == 1)cout<<"1 carry operation."<<endl;
+    else cout<<result<<" carry operations."<<endl;
+    
+    
   }
   
   return 0;
