@@ -2,3 +2,12 @@
 *.out
 poj
 input_outputfile
+*.o
+.DS_Store
+tags
+TAGS
+*.dSYM
+*.log
+*.dvi
+*.aux
+*.elc
