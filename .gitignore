@@ -1,6 +1,5 @@
 *.txt
 *.out
-poj
 input_outputfile
 *.o
 .DS_Store
